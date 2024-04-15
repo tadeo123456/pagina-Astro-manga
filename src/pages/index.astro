@@ -1,0 +1,230 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+//import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+//import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+//import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get template',
+        href: 'https://github.com/onwidget/astrowind',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/header-background.jpg', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Ciencia Figcion en el Manga <br> <span class="hidden xl:inline">Los Principales Exponentes de la ciencia Figcione en el Manga:</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Que es la ciencia Figcion? </span>La ciencia ficción es un género narrativo que sitúa la acción en unas coordenadas espacio-temporales imaginarias y diferentes a las nuestras, 
+        y que especula racionalmente sobre posibles avances científicos o sociales y su impacto en la sociedad.</span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Autores"
+    title="Principales Autores "
+    subtitle="Los principales autores del y algunas de Sus obras mas representativas"
+    items={[
+      {
+        title: 'Masamune Shirow',
+        description:
+          'Autor de "Ghost in the Shell", una obra influyente que explora temas de inteligencia artificial, ciberespacio y la relación entre humanos y tecnología.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Katsuhiro Otomo',
+        description:
+          'Conocido por "Akira", una obra maestra del manga y del género cyberpunk, que presenta una distopía futurista.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Tsutomu Nihei',
+        description:
+          'Autor de obras como "Blame!" y "Knights of Sidonia". Sus obras a menudo exploran entornos postapocalípticos y tecnologías avanzadas.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Yukito Kishiro',
+        description:
+          'Creador de "Battle Angel Alita" (Gunnm), una serie que se desarrolla en un mundo ciberpunk y sigue la historia de una cyborg llamada Alita.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Hajime Isayama',
+        description:
+          "Aunque más conocido por Attack on Titan (Shingeki no Kyojin), Isayama ha incorporado elementos de ciencia ficción en su obra, especialmente en los desarrollos relacionados con la trama y la mitología.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Makoto Yukimura',
+        description:
+          'Autor de "Planetes", una obra que aborda temas relacionados con la exploración espacial y la vida en el espacio, centrándose en un grupo de recolectores de basura espacial.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Sub Mangas"
+    title="Principales Sub Generos del Manga de Ciencia Figcion "
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Isekai</h3>
+      La premisa típica de un anime o manga isekai implica que los personajes principales son transportados 
+      o reencarnados de alguna manera desde el mundo real a un mundo completamente diferente, a menudo fantástico o mágico.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mecha</h3>
+      El género mecha es un subgénero de la ciencia ficción que se centra en máquinas gigantes pilotadas,
+       conocidas como "mechas". Estas máquinas pueden variar desde robots humanoides hasta vehículos 
+       robóticos de gran tamaño, generalmente tripulados por personajes humanos.
+       El término "mecha" proviene de la palabra "mechanical" (mecánico en inglés).</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    image={{
+      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Astronauts Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Distopico</h3>
+      
+  El género distópico se refiere a un tipo de narrativa que describe un mundo o 
+  sociedad futura que es indeseable o incluso aterradora. En una distopía, se presenta una
+  visión negativa y opresiva del futuro, a menudo caracterizada por un gobierno totalitario, 
+  falta de libertades individuales,
+  condiciones de vida adversas, y a menudo, un entorno social y ambiental deteriorado.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Mangas mas Populares "
+    subtitle="Segun los datos obtenidos de una busqueda en Google"
+    tagline="Series"
+    items={[
+      {
+        title: 'Gaikotsu Kishi-sama.',
+        description: " Un día, un jugador jugó videojuegos hasta que se quedó dormido… y cuando se despertó, se encontró en el mundo del juego, ¡como un esqueleto!",
+      },
+      {
+        title: 'Inuyasha',
+        description:
+          "cuenta la historia de Kagome, una adolescente que viaja a través del tiempo y se encuentra con un medio demonio llamado Inuyasha. Juntos, luchan contra demonios y buscan las piezas de la Joya de las Cuatro Almas para restaurarla y evitar que caiga en manos equivocadas.",
+       
+      },
+      {
+        title: 'Nonbiri Nouka.',
+        description:
+          'Habiendo muerto por una enfermedad a los 39 años, Hiraku Machio tiene la oportunidad de renacer en otro mundo. Cuando Dios le pregunta cuál es su deseo con la intención de darle fuerzas, solicita tener un cuerpo sano esta vez.',
+        
+      },
+      {
+        title: 'Neon Genesis Evangelion.',
+        description:
+          "La historia de la obra se da lugar en un mundo futurista en el que una organización paramilitar llamada NERV protege a la humanidad de los ataques de seres de origen y naturaleza desconocidos, los «Ángeles», utilizando para ello bio mechas humanoides llamados Evangelion (acortado a EVA).",
+        
+      },
+      {
+        title: 'Mazinger Z.',
+        description:
+          'se cuenta la historia de dos arqueólogos que encontraron los restos de una civilización antigua que era capaz de construir robots gigantes, uno de los arqueólogos cree que construyendo robots como esos podría gobernar al mundo.',
+       
+      },
+      {
+        title: 'Code Geass: Hangyaku no Lelouch.',
+        description: 'En el año 2010, el Sacro Imperio de Britannia se ha establecido como la nación militar más poderosa del mundo, comenzando con la conquista de Japón, ahora renombrada como Área 11, después de su aplastante derrota',
+       
+      },
+      {
+        title: 'Akira',
+        description: 'Akira es un manga que se encuentra sobre la línea entre la distopía y el futuro postapocalíptico. El colapso social, la degradación a través de la tecnología y la estética cyberpunk abundan en el mundo de Akira.',
+        
+      },
+      {
+        title: '20th Century Boys',
+        description:
+          'Kenji Endo es un joven que se siente horrorizado por el repentino suicidio de su amigo de la infancia, y lo peor es que tiene la certeza que un hombre llamado Friend está detrás de todo. Friend dirige un culto secreto, y cuando Kenji lo investiga descubre que esa organización es más grande de lo que parece y tiene siniestros planes para el mundo.',
+       
+      },
+      {
+        title: 'Dr. Stone',
+        description: "Senku y Taiju son dos estudiantes completamente diferentes, el primero es un genio, mientras que el otro no lo es tanto, pero lo compensa con una enorme fuerza física.",
+        
+      },
+    ]}
+  >
+
+</Layout>
